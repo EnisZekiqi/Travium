@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #09090B;
     --foreground: #ededed;
   }
 }
@@ -23,4 +23,133 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+  background: rgba(9, 9, 11,0.5);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.subs {
+  box-shadow: inset 0 2px 8px rgba(165, 180, 252, 0.1);
+}
+.ss{
+  background-image: url(./Components/dots.png);
+  background-repeat: repeat;
+  background-size: 50%;
+}
+.dotts {
+  width: 770px;
+  height: 385px;
+  /* The dotted pattern */
+  background: radial-gradient(#33385F 1px, transparent 1px);
+  background-size: 3px 3px;
+  background-repeat: repeat;
+
+  /* Mask with a radial gradient so only center part is visible */
+  -webkit-mask: radial-gradient(50% 46% at 50% 50%, #000 0%, rgba(0,0,0,0) 100%);
+  mask:radial-gradient(28.000000000000004% 34% at 68.8% 50%,#000000 0%,rgba(0,0,0,0) 100%) add;
+
+  /* Color overlay for the mask */
+  opacity: 1;
+
+  /* Make sure it's visible above background but below text */
+
+  /* Allow lights to overflow naturally */
+}
+@media (max-width:600px) {
+  .dotts{
+    width:500px;
+  }
+}
+.Al{
+  background-color:rgb(13, 13, 19) ;
+   backdrop-filter: blur(0.7px);
+  -webkit-backdrop-filter: blur(0.7px);
+  border-radius: 999px;
+  opacity:1
+}
+.as{
+box-shadow: 0px 3px 29px 3.5px rgba(129,140,248,0.45);
+-webkit-box-shadow: 0px 3px 29px 3px rgba(129,140,248,0.45);
+}
+.as2{
+box-shadow: 0px 0px 29px 5.5px rgba(250,152,75,.45);
+-webkit-box-shadow: 0px 0px 29px 5.5px rgba(250,152,75,.45);
+}
+
+@media (max-width: 764px) {
+  .as{
+    box-shadow: 0px 3px 2px 0.5px rgba(129,140,248,0.45);
+-webkit-box-shadow: 0px 0px 2px 0.5px rgba(129,140,248,0.45);
+  }
+  .as2{
+box-shadow: 0px 0px 2px 0.5px rgba(250,152,75,.45);
+-webkit-box-shadow: 0px 0px 2px 0.5px rgba(250,152,75,.45);
+}
+}
+.logo-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+}
+
+/* Glow is behind everything */
+
+
+.logo-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+background-color: #09090B;
+
+  opacity: 0.3;
+}
+
+/* Grain is on top but see-through */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://www.hover.dev/noise.png'); /* valid URL */
+  background-size: cover;
+  opacity: 0.1; /* adjust visibility */
+  /* Blend with what's below (logo + glow) */
+  mix-blend-mode: overlay; 
+  z-index: 2;
+  pointer-events: none;
+}
+.card1{
+  border-radius:16px;
+  background: linear-gradient(180deg, rgba(129, 140, 248, 0.03) 0%, rgba(129, 140, 248, 0) 100%);
+  box-shadow: inset 0 1px 0 0 rgba(165, 180, 252, .1), inset 0 0 4px 0 rgba(165, 180, 252, .3), inset 0 -4px 8px 0 rgba(165, 180, 252, .1), 0 2px 0 0 rgba(165, 180, 252, .1);
+}
+.inputchange{
+  box-shadow: 0px -4px 17px 0px rgba(129,140,248,0.75);
+-webkit-box-shadow: 0px -4px 17px 0px rgba(129,140,248,0.75);
+}
+.first-background{
+  background-color: #111116;
+  border-radius: 14px;
+  padding: 6px;
+}
+.second-background{
+  background-image: url('https://plus.unsplash.com/premium_photo-1671734045770-4b9e1a5e53a0?w=500&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.contentweather{
+  background: rgba(250, 250, 250,0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.mainspan{
+   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color:#818cf808;
+  box-shadow: inset 0 1px 0 0  #6366f1,inset 0 1px 1px 0 rgb(99, 102, 241),inset 0 1px 8px 0  rgb(99, 102, 241);
 }

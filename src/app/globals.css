@@ -153,3 +153,36 @@ background-color: #09090B;
   background-color:#818cf808;
   box-shadow: inset 0 1px 0 0  #6366f1,inset 0 1px 1px 0 rgb(99, 102, 241),inset 0 1px 8px 0  rgb(99, 102, 241);
 }
+.cities{
+  background-image: url('https://plus.unsplash.com/premium_photo-1671734045770-4b9e1a5e53a0?w=500&auto=format&fit=crop');
+  background-color: #171717;
+  background-size: cover;
+  background-repeat: no-repeat;
+   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.citiesv2{
+  background-image: url('https://images.unsplash.com/photo-1603551664565-1b3c3dd61075?w=500&auto=format&fit=crop');
+  background-color: #171717;
+  background-size: cover;
+  background-repeat: no-repeat;
+   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.citiesv3{
+  background-image: url('https://plus.unsplash.com/premium_photo-1661963282618-f9445b5684b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG5vcndheXxlbnwwfHwwfHx8MA%3D%3D');
+  background-color: #171717;
+  background-size: cover;
+  background-repeat: no-repeat;
+   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.zoro{
+  background-color:#0D0D13;
+  opacity:1
+}
+.logob{
+  background-color:#818cf808;
+    box-shadow: inset 0 1px 0 0 rgba(165, 180, 252, .1), inset 0 0 4px 0 rgba(165, 180, 252, .3), inset 0 -4px 8px 0 rgba(165, 180, 252, .1), 0 2px 0 0 rgba(165, 180, 252, .1);
+
+}

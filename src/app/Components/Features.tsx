@@ -69,7 +69,7 @@ const containerVariant = {
                     }
                     }}
                     viewport={{once:true}}
-                    className="text-4xl text-white font-medium">  Explore Smarter, Travel Further</motion.h1>
+                    className="text-2xl sm:text-4xl text-white font-medium text-center">  Explore Smarter, Travel Further</motion.h1>
                 <motion.p
                  initial={{opacity:0, y: 30 }}
         whileInView={{opacity:1,y:0,transition:{duration:0.3,delay:0.4,  type: "spring",       // spring animation instead of duration
@@ -78,7 +78,7 @@ const containerVariant = {
                     }
                     }}
                     viewport={{once:true}}
-                    className="text-sm text-white/50 text-center w-2/5"> Discover hidden gems, build AI-powered itineraries, and enjoy seamless journeys— 
+                    className="text-sm text-white/50 text-center w-full sm:w-2/5"> Discover hidden gems, build AI-powered itineraries, and enjoy seamless journeys— 
   all in one powerful travel companion.</motion.p>
                 <motion.div
                     variants={containerVariant}

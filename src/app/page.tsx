@@ -1,5 +1,6 @@
 import Features from "./Components/Features";
 import HeroSection from "./Components/HeroSection";
+import JoinUs from "./Components/JoinUs";
 import Trending from "./Components/Trending";
 
 export default function Home() {
@@ -10,6 +11,9 @@ export default function Home() {
       <Features />
        <div className="empty h-[150px]"></div>
       <Trending />
+             <div className="empty h-[150px]"></div>
+
+      <JoinUs/>
     </div>
   );
 }

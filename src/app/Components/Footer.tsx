@@ -43,18 +43,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter input */}
-         <div className="hidden sm:block w-[360px] ">
-  <div className="flex overflow-hidden rounded-2xl border p-1.5 border-[#191A24] bg-[#09090B] focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200">
-    <input
-      type="text"
-      placeholder="Enter your email"
-      className="flex-1 px-4 py-2 bg-transparent text-white placeholder-white/40 focus:outline-none"
-    />
-    <button className="px-4 py-2 text-sm sm:text-md bg-[#0B0B0E] rounded-xl shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] text-white hover:bg-[#1A1A24] transition">
-      Subscribe
-    </button>
-  </div>
-</div>
+         
 
         </div>
       </div>

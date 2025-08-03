@@ -81,7 +81,7 @@ const containerVariant = {
       placeholder={hover ? 'Paris':'Type a destination...'}
       className={`  ${hover ? '':''} flex-1 px-4 py-2 bg-transparent text-white placeholder-white/40 focus:outline-none`}
     />
-    <button className="card1 px-4 py-2 text-sm sm:text-md rounded-lg border border-[#26283A]  text-[#585860] transition">
+    <button className="card1 px-4 py-2 text-sm sm:text-md -ml-8 sm:-ml-0 rounded-lg border border-[#26283A]  text-[#585860] transition">
       <FaLocationArrow size={18}/>
     </button>
   </div>

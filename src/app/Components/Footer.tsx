@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="py-10 px-8 md:px-16 w-full bg-[#0D0D13] border-t border-[#202131]">
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 items-center  gap-10">
         
         {/* Left side */}
         <div className="flex flex-col gap-6">

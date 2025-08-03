@@ -2,7 +2,12 @@
 import Image from "next/image";
 import { motion,AnimatePresence } from "motion/react";
 import { IoIosClose,IoIosMenu  } from "react-icons/io";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { IoMdArrowBack } from "react-icons/io";
+
+
 const Navbar = () => {
 
 
@@ -36,6 +41,10 @@ const Navbar = () => {
     {id:'#home',title:'Home'},{id:'#features',title:'Features'},{id:'#discover',title:'Discover'},{id:'#contact',title:'Contact'}
   ]
   
+  const pathname = usePathname();
+ const isHome = pathname === '/';
+  const isResources = pathname.startsWith('/destination');
+
   return ( 
     <nav className="relative py-8 fixed px-8 sm:px-18 flex items-center gap-2 w-full z-50">
       {/* Lights */}
@@ -73,9 +82,18 @@ const Navbar = () => {
             <li className="hover:text-white/50 transition duration-300">Contact</li>
           </ul>
         </div>
-        <button className="cursor-pointer bg-[#4F46E5] p-1.5 rounded-lg text-sm font-medium text-white">
-          Find Location
+       {isHome ?   <div className="flex gap-4">
+        <Link href="/destination/favorites" className="hover:text-yellow-400">
+          ⭐ Favorites
+        </Link>
+      </div> : 
+              <Link href={`/`}>
+        <button className="cursor-pointer flex items-center bg-[#4F46E5] p-1.5 mt-1 rounded-lg text-sm font-medium text-white">
+          <IoMdArrowBack/> Back
         </button>
+      </Link>
+
+        }
         </div>
         <div className={`flex z-[300] justify-between items-center w-full 
     ${modalNavbar ? 'hidden' : 'flex'} sm:hidden`}

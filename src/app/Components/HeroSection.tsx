@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import { FaLocationArrow } from "react-icons/fa";
 import { motion,AnimatePresence } from "motion/react";
 import { CiSearch } from "react-icons/ci";
+import { useRouter } from 'next/navigation';
 
 const images = [
   'https://plus.unsplash.com/premium_photo-1666432045848-3fdbb2c74531?q=80&w=1032&auto=format&fit=crop',
@@ -26,6 +27,14 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
   images.filter((_, i) => i % columns === colIndex)
 );
 
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+
+  const handleSearch = () => {
+    if (query.trim() !== '') {
+      router.push(`/destination/${query.toLowerCase()}`);
+    }
+  }
 
   return (
     <section className="relative  text-white h-full flex flex-col justify-center items-center overflow-hidden">
@@ -63,6 +72,21 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
         className="text-white/50 text-sm sm:text-md font-light mb-8 text-center">
         Plan smarter. Travel further. Make every journey unforgettable
       </motion.p>
+          
+     <div className=" w-full sm:w-[460px] ">
+  <div className="flex overflow-hidden rounded-2xl border p-1.5 border-[#4F46E5]/60 bg-[#0A0A0C] focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200">
+    <input
+      type="text"
+            placeholder="Type a City..."
+            value={query}
+            onChange={(e)=>setQuery(e.target.value)}
+      className="flex-1 px-4 py-2 bg-transparent text-white placeholder-white/40 focus:outline-none"
+    />
+    <button onClick={handleSearch} className="px-4 py-2 text-sm sm:text-md -ml-12 sm:-ml-0 bg-[#0B0B0E] rounded-xl shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] text-white hover:bg-[#1A1A24] transition">
+      Search
+    </button>
+  </div>
+</div>
 
       <motion.div
      initial={{ y: 30 }}
@@ -131,22 +155,26 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
   </div>
           </div>
           <div className="flex items-start justify-between w-full px-6 gap-4">
-            <div className="hidden sm:flex flex-col mt-4 border-r border-[#343434] h-[93%] pr-16">
+            <div className="hidden sm:flex flex-col justify-between mt-4 border-r border-[#343434] h-[80%] pr-16">
               <ul>
                 <li className="rounded-full p-2 bg-[#151623] text-sm font-light">Explore</li>
                 <li className="rounded-full p-2  text-sm font-light text-white/70">Weather</li>
                 <li className="rounded-full p-2 bg-[] text-sm font-light text-white/70">Destination</li>
                 <li className="rounded-full p-2 bg-[] text-sm font-light text-white/70">Saved</li>
               </ul>
+              <div className="-mt-10">
+                 <p className="text-white/50 text-sm font-light">- Help</p>
+              <p className="text-white/50 text-sm font-light">- My Account</p>
+             </div>
             </div>
-           <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mt-2 w-full overflow-y-auto">
+           <div className="grid mask-b-from-20% mask-b-to-96.5% sm:mask-b-to-80% grid-cols-4 gap-3 mt-2 w-full h-full overflow-y-auto">
   {columnedImages.map((col, colIndex) => (
     <div key={colIndex} className="flex flex-col items-start gap-3">
       {col.map((src, imgIndex) => (
         <img
           key={imgIndex}
           src={src}
-          className="lg:w-[110px] w-[80px] h-[80px] md:w-[90px] md:h-[100px] lg:h-[120px] object-cover rounded-lg mb-2"
+          className="w-full h-full object-cover rounded-lg mb-2"
           alt={`img-${imgIndex}`}
         />
       ))}

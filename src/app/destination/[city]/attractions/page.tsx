@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getAttractions } from "@/app/lib/api/wikimedia";
 import { useParams } from "next/navigation";
 import QueryProvider from "../QueryProvider";
-import { IoMdStar ,IoMdStarOutline   } from "react-icons/io";
+import { IoMdStar ,IoMdStarOutline    } from "react-icons/io";
 import { useState, useEffect } from "react";
 
 const AttractionsPage=()=> {

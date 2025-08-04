@@ -1,11 +1,10 @@
 'use client'
 import Image from "next/image";
 import { motion,AnimatePresence } from "motion/react";
-import { IoIosClose,IoIosMenu  } from "react-icons/io";
+import { IoIosClose,IoIosMenu,IoMdStarOutline ,IoMdStar,IoMdArrowBack } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
-import { IoMdArrowBack } from "react-icons/io";
 
 
 const Navbar = () => {
@@ -82,9 +81,9 @@ const Navbar = () => {
             <li className="hover:text-white/50 transition duration-300">Contact</li>
           </ul>
         </div>
-       {isHome ?   <div className="flex gap-4">
-        <Link href="/destination/favorites" className="hover:text-yellow-400">
-          ⭐ Favorites
+       {isHome ?   <div className="flex gap-4 items-center">
+        <Link href="/favorites" className="text-[#fff] bg-[#4F46E5] flex items-center gap-1.5 rounded-lg text-sm font-medium p-1.5">
+          <IoMdStar className="text-yellow-400" size={22}/> Favorites
         </Link>
       </div> : 
               <Link href={`/`}>

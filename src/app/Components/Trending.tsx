@@ -101,11 +101,17 @@ const containerVariant = {
                 <div
                     
                     className="card1 w-[340px] sm:w-full md:w-[550px] border border-[#2E3045] p-8 flex flex-col gap-16 items-center">
-                    <div className="first-background w-[320px] h-[200px] sm:w-[350px] sm:h-[225px] flex flex-col items-center justify-center">
+                    <motion.div
+              variants={containerVariant}
+              initial="initial"
+              whileInView="animate"
+              viewport={{once:true,amount:0.2}}
+              className="first-background w-[320px] h-[200px] sm:w-[350px] sm:h-[225px] flex flex-col items-center justify-center">
                        
                         <div className="weather-grid flex flex-col gap-4 w-full">
   {/* City 1 */}
-                <div
+                <motion.div
+                  variants={childrenVariant}
                   onMouseEnter={() => setHoverv2('london')}
                   onMouseLeave={()=>setHoverv2('')}
                   className={`flex items-center ${hoverv2 === 'london' ? 'cities':''} transition-all duration-300 justify-between bg-[#1b1b25] rounded-lg p-3`}>
@@ -117,10 +123,11 @@ const containerVariant = {
       <IoMdCloudy />
       <p className={`text-sm ${hoverv2 === 'london' ? 'text-black/70':'text-white'} transition-all duration-300`}>15°C</p>
     </div>
-  </div>
+  </motion.div>
 
   {/* City 2 */}
-  <div
+                <motion.div
+                  variants={childrenVariant}
    onMouseEnter={() => setHoverv2('rome')}
                   onMouseLeave={()=>setHoverv2('')}
                   className={`flex items-center ${hoverv2 === 'rome' ? 'citiesv2':''} transition-all duration-300 justify-between bg-[#1b1b25] rounded-lg p-3`}>
@@ -132,10 +139,11 @@ const containerVariant = {
       <IoMdSunny/>
       <p className="text-sm text-white">22°C</p>
     </div>
-  </div>
+  </motion.div>
 
   {/* City 3 */}
-                <div
+                <motion.div
+                  variants={childrenVariant}
    onMouseEnter={() => setHoverv2('norway')}
                   onMouseLeave={()=>setHoverv2('')}
                   className={`flex items-center ${hoverv2 === 'norway' ? 'citiesv3':''} transition-all duration-300 justify-between bg-[#1b1b25] rounded-lg p-3`}>
@@ -147,11 +155,11 @@ const containerVariant = {
       <IoMdSnow/>
       <p className="text-sm text-white">-2°C</p>
     </div>
-  </div>
+  </motion.div>
 </div>
 
 
-                    </div>
+                    </motion.div>
                     
                 </div>
                 <motion.div

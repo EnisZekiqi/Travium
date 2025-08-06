@@ -9,7 +9,7 @@ const JoinUs = () => {
   const router = useRouter();
     const [query, setQuery] = useState('');
   
-    const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
        e.preventDefault()
       if (query.trim() !== '') {
         router.push(`/destination/${query.toLowerCase()}`);

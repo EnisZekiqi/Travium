@@ -1,5 +1,5 @@
 export async function getCityWeather(city: string) {
-  const apiKey = process.env.NEXT_PUBLIC_WEATHER_KEY;
+  const apiKey = process.env.WEATHER_KEY;
 const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}`;
    
 

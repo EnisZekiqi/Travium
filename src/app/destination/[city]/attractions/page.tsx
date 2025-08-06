@@ -30,7 +30,27 @@ useEffect(() => {
   setFavorites(saved);
 }, []);
 
-if (isLoading) return <p>Loading attractions...</p>;
+if (isLoading) return (
+  <div className="container mx-auto mt-4 p-4 mb-10">
+    <h1 className="text-2xl font-bold mb-4">
+      Attractions in {city}
+    </h1>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {[...Array(6)].map((_, idx) => (
+        <div key={idx} className="card1 border border-[#2E3045] flex flex-col justify-between rounded-lg p-4 shadow-lg animate-pulse">
+          <div className="flex flex-col items-start gap-2">
+            <div className="h-6 bg-gray-700 rounded w-3/4 mb-2"></div>
+            <div className="h-4 bg-gray-800 rounded w-full mb-3"></div>
+          </div>
+          <div className="flex justify-between items-center mt-2">
+            <div className="h-4 bg-gray-700 rounded w-20"></div>
+            <div className="h-6 w-6 bg-yellow-400 rounded-full"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
 if (isError) return <p>Failed to load attractions.</p>;
     
     
@@ -64,22 +84,24 @@ if (isError) return <p>Failed to load attractions.</p>;
 
     
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">
-        Attractions in {city}
+    <div className="container mx-auto mt-4 p-4 mb-10">
+      <h1 className="text-2xl font-bold mb-4 flex items-center gap-1.5">
+        Attractions in <p className="text-[#818cf8]">{city}</p>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
   {data.query.search.map((item: any) => (
-    <div key={item.pageid} className="card1 border border-[#2E3045] rounded-lg p-4 shadow-lg">
-      <h2 className="font-bold text-lg">{item.title}</h2>
+    <div key={item.pageid} className="card1 border border-[#2E3045] flex flex-col justify-between rounded-lg p-4 shadow-lg">
+     <div className="flex flex-col  items-start gap-2">
+       <h2 className="font-bold text-lg">{item.title}</h2>
       <p className="text-sm text-gray-400 mb-3">
         {item.snippet.replace(/<[^>]+>/g, "")}
       </p>
-      <div className="flex justify-between items-center">
+     </div>
+      <div className="flex justify-between items-center mt-2">
         <a 
           href={`https://en.wikipedia.org/?curid=${item.pageid}`} 
           target="_blank" 
-          className="text-blue-400 text-sm"
+          className="text-[#818cf8] text-sm"
         >
           Learn More
         </a>

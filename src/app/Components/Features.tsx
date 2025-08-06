@@ -40,7 +40,7 @@ const containerVariant = {
   }
 
     return ( 
-        <div className="flex flex-col items-center justify-center">
+        <div id="features" className="flex flex-col items-center justify-center">
              <div className="logo-wrapper ">
               <div className="logo-glow"></div>
 

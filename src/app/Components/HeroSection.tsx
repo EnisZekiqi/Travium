@@ -4,7 +4,6 @@ import { FaLocationArrow } from "react-icons/fa";
 import { motion } from "motion/react";
 import { CiSearch } from "react-icons/ci";
 import { useRouter } from 'next/navigation';
-import MouseTrap from "mousetrap";
 
 
 const images = [
@@ -41,7 +40,7 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
 
 
   return (
-    <section className="relative  text-white h-full flex flex-col justify-center items-center overflow-hidden">
+    <section id="home" className="relative  text-white h-full flex flex-col justify-center items-center overflow-hidden">
       {/* Background image */}
       <motion.span
         initial={{ y: 30 }}

@@ -37,7 +37,7 @@ const containerVariant = {
   }
     
     return ( 
-        <div className="flex flex-col items-center justify-center gap-30 h-full w-full">
+        <div id="discover" className="flex flex-col items-center justify-center gap-30 h-full w-full">
             <div className="flex flex-col md:flex-row items-center justify-center gap-16 w-full">
                 <div
                     onMouseEnter={()=>setHover(true)}

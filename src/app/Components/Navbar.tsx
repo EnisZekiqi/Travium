@@ -12,16 +12,7 @@ const Navbar = () => {
 
   const [modalNavbar, setModalNavbar] = useState(false)
   
-   useEffect(() => {
-        
-            if (modalNavbar) {
-              document.body.style.overflow = 'hidden';
-              window.scrollTo(0, 0);
-            } else {
-              document.body.style.overflow = 'auto';
-            }
-          }, [modalNavbar]);
-
+  
   
   const containerVariant = {
     initial:{ opacity: 0 },
@@ -75,10 +66,10 @@ const Navbar = () => {
             <Image src="/travel.svg" alt="Logo" width={25} height={25} />
           </div>
           <ul className="flex items-center gap-4 font-normal text-sm text-white cursor-pointer">
-            <li className="hover:text-white/50 transition duration-300">Home</li>
-            <li className="hover:text-white/50 transition duration-300">Features</li>
-            <li className="hover:text-white/50 transition duration-300">Discover</li>
-            <li className="hover:text-white/50 transition duration-300">Contact</li>
+          <a href="#home">  <li className="hover:text-white/50 transition duration-300">Home</li></a>
+           <a href="#features"> <li className="hover:text-white/50 transition duration-300">Features</li></a>
+           <a href="#discover"> <li className="hover:text-white/50 transition duration-300">Discover</li></a>
+            <a href="#contact"><li className="hover:text-white/50 transition duration-300">Contact</li></a>
           </ul>
         </div>
        {isHome ?   <div className="flex gap-4 items-center">
@@ -133,9 +124,9 @@ const Navbar = () => {
             </motion.div>
           ))}
               </motion.ul>
-             <button className="cursor-pointer bg-[#4F46E5] w-full text-center p-1.5 mt-4 rounded-lg text-sm font-medium text-white">
-          Find Location
-        </button>
+            <Link href="/favorites" className="text-[#fff] bg-[#4F46E5] text-center justify-center mt-4 flex items-center gap-1.5 rounded-lg text-sm font-medium p-1.5">
+          <IoMdStar className="text-yellow-400" size={22}/> Favorites
+        </Link>
           </div>  
         </>
         }

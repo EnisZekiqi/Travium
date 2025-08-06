@@ -27,7 +27,10 @@ export default async function DestinationPage({ params }: PageProps) {
   }
 
   return (
-    <div className="container mx-auto p-4">
+    <div
+      initial={{ opacity: 0 }}
+      animate={{opacity:1,transition:{duration:0.5}}}
+      className="container mx-auto p-4 mb-10 flex flex-col items-start">
       {/* Hero section with Unsplash image */}
       <div
         className="w-full h-64 rounded-xl bg-contain bg-no-repeat bg-center mb-6"
@@ -35,7 +38,7 @@ export default async function DestinationPage({ params }: PageProps) {
       ></div>
 
       <h1 className="text-3xl font-bold">{summary.title}</h1>
-      <p className="mt-2 text-white/50">{summary.description}</p>
+      <p className="mt-2 text-white/50 text-sm sm:text-md md:text-[16px]">{summary.description}</p>
 
       {/* Weather */}
       {weather && (
@@ -49,7 +52,7 @@ export default async function DestinationPage({ params }: PageProps) {
 
       {/* Button to explore attractions (future) */}
      <Link href={`/destination/${city}/attractions`}>
-    <button className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg">
+    <button className="mt-6 cursor-pointer px-4 py-2 bg-[#4F46E5] text-white rounded-lg">
     Explore Attractions
   </button>
 </Link>

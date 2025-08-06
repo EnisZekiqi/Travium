@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.84.1",
+    "framer-motion": "^12.23.12",
     "motion": "^12.23.9",
     "mousetrap": "^1.6.5",
     "next": "15.4.4",

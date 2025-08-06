@@ -2,11 +2,8 @@ import { getCitySummary } from "@/app/lib/api/wikimedia";
 import { getCityImage } from "@/app/lib/api/unsplash";
 import { getCityWeather } from "@/app/lib/api/weather";
 import Link from "next/link";
-type PageProps = {
-  params: { city: string };
-};
 
-export default async function DestinationPage({ params }: PageProps) {
+export default async function DestinationPage({ params }: { params: { city: string } }) {
   const city = params.city;
 
   // Run all 3 API calls in parallel (faster)

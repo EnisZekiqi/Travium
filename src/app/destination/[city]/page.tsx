@@ -3,13 +3,7 @@ import { getCityImage } from "@/app/lib/api/unsplash";
 import { getCityWeather } from "@/app/lib/api/weather";
 import Link from "next/link";
 
-interface DestinationPageProps {
-  params: {
-    city: string;
-  };
-}
-
-export default async function DestinationPage({ params }: DestinationPageProps) {
+export default async function DestinationPage({ params }) {
   const city = params.city;
 
   // Run all 3 API calls in parallel (faster)

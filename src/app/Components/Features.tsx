@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import { motion } from "motion/react";
-import { FaLocationArrow } from "react-icons/fa";
 import { CiCloudOn,CiCompass1,CiFaceSmile   } from "react-icons/ci";
 
 

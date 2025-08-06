@@ -54,18 +54,18 @@ if (isLoading) return (
 if (isError) return <p>Failed to load attractions.</p>;
     
     
-   const toggleFavorite = (item: any) => {
+   const toggleFavorite = (item: { pageid: number; title: string; snippet: string }) => {
   // Get current favorites (or empty array)
-  const saved = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const saved: Favorite[] = JSON.parse(localStorage.getItem("favorites") || "[]");
 
   // Check if item is already saved
-  const exists = saved.find((fav: any) => fav.pageid === item.pageid);
+  const exists = saved.find((fav: Favorite) => fav.pageid === item.pageid);
 
-  let updatedFavorites;
+  let updatedFavorites: Favorite[];
 
   if (exists) {
     // Remove it
-    updatedFavorites = saved.filter((fav: any) => fav.pageid !== item.pageid);
+    updatedFavorites = saved.filter((fav: Favorite) => fav.pageid !== item.pageid);
   } else {
     // Add it
     updatedFavorites = [...saved, { 
@@ -89,7 +89,7 @@ if (isError) return <p>Failed to load attractions.</p>;
         Attractions in <p className="text-[#818cf8]">{city}</p>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-  {data.query.search.map((item: any) => (
+  {data.query.search.map((item: { pageid: number; title: string; snippet: string }) => (
     <div key={item.pageid} className="card1 border border-[#2E3045] flex flex-col justify-between rounded-lg p-4 shadow-lg">
      <div className="flex flex-col  items-start gap-2">
        <h2 className="font-bold text-lg">{item.title}</h2>
@@ -110,7 +110,7 @@ if (isError) return <p>Failed to load attractions.</p>;
   className="text-yellow-400 hover:text-yellow-500"
   onClick={() => toggleFavorite(item)}
 >
-  {favorites.find((fav: any) => fav.pageid === item.pageid) 
+  {favorites.find((fav: Favorite) => fav.pageid === item.pageid) 
     ? <IoMdStar size={22}/> 
     : <IoMdStarOutline size={22}/>}
 </button>

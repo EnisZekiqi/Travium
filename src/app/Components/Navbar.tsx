@@ -1,8 +1,8 @@
 'use client'
 import Image from "next/image";
 import { motion,AnimatePresence } from "motion/react";
-import { IoIosClose,IoIosMenu,IoMdStarOutline ,IoMdStar,IoMdArrowBack } from "react-icons/io";
-import { useState, useEffect } from "react";
+import { IoIosClose,IoIosMenu ,IoMdStar,IoMdArrowBack } from "react-icons/io";
+import { useState } from "react";
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 
@@ -33,7 +33,6 @@ const Navbar = () => {
   
   const pathname = usePathname();
  const isHome = pathname === '/';
-  const isResources = pathname.startsWith('/destination');
 
   return ( 
     <nav className="relative py-8 fixed px-8 sm:px-18 flex items-center gap-2 w-full z-50">

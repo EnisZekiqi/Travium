@@ -4,6 +4,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { motion } from "motion/react";
 import { CiSearch } from "react-icons/ci";
 import { useRouter } from 'next/navigation';
+import Image from "next/image";
 
 
 const images = [
@@ -180,11 +181,14 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
   {columnedImages.map((col, colIndex) => (
     <div key={colIndex} className="flex flex-col items-start gap-3">
       {col.map((src, imgIndex) => (
-        <img
+        <Image
           key={imgIndex}
           src={src}
+          width={300}
+          height={200}
           className="w-full h-full object-cover rounded-lg mb-2"
           alt={`img-${imgIndex}`}
+          unoptimized // Remove this line if you want Next.js to optimize remote images and configure domains in next.config.js
         />
       ))}
     </div>

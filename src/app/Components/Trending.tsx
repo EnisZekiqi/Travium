@@ -3,7 +3,6 @@ import { CiEdit,CiMap ,CiLocationArrow1 ,CiMapPin  } from "react-icons/ci";
 import { FaLocationArrow } from "react-icons/fa";
 import { useState } from "react";
 import { motion } from "motion/react";
-import Image from "next/image";
 import { IoMdSunny,IoMdSnow ,IoMdCloudy,IoMdStar ,IoMdStarOutline   } from "react-icons/io";
 
 const Trending = () => {

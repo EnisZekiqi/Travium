@@ -13,7 +13,7 @@ export async function getCitySummary(city:string) {
     return {
         title: data.title,
         description: data.extract,
-        image:data.thimbnail?.source || null
+        image: data.thumbnail?.source || null
     }
 }
 

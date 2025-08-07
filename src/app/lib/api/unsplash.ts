@@ -1,5 +1,5 @@
 export async function getCityImage(city: string) {
-  const accessKey = process.env.NEXT_PUBLIC_UNSPLASH_KEY;
+  const accessKey = process.env.UNSPLASH_KEY;
   const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
     city
   )}&client_id=${accessKey}&orientation=landscape`;

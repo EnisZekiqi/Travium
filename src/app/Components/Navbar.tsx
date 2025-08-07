@@ -39,7 +39,7 @@ const Navbar = () => {
       {/* Lights */}
           <motion.div
               initial={{ opacity: 0.6, x: 30 }}
-              animate={{opacity:[0.4,0.7,0.4],x:[30,-60,30],transition:{duration:10,repeat:Infinity,autoReverse:true}}}
+              animate={{opacity:[0.4,0.7,0.4],x:[30,-60,30],transition:{duration:10,repeat:Infinity}}}
               className="light absolute lg:block hidden w-[96px] h-[600px] left-[690px] lg:left-[100px] xl:left-[939px] -top-[227px] rounded-full opacity-50 
                       bg-[#818cf84d] blur-[32px] animate-float-slow rotate-[32deg]"></motion.div>
  <div className="lg:hidden block light absolute w-[60px] sm:w-[96px] h-[400px] left-[170px] xs:left-[350px] sm:left-[409px] xl:left-[729px] -top-[112px] rounded-full opacity-30 
@@ -114,6 +114,7 @@ const Navbar = () => {
                 {navigation.map((sdc,index) => (
                   <motion.div
                     variants={childrenVariant}
+                    onClick={()=>setModalNavbar(false)}
                     key={index} className="k text-white">
                     <motion.a
                   

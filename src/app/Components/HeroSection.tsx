@@ -77,7 +77,12 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
         Plan smarter. Travel further. Make every journey unforgettable
       </motion.p>
           
-     <div className=" w-full sm:w-[460px] ">
+     <motion.div
+      initial={{ y: 30 }}
+        animate={{y:0,transition:{duration:0.3,delay:0.5,  type: "spring",       // spring animation instead of duration
+    damping: 15,          // lower = bouncier, higher = less bounce
+    stiffness: 120, }}}
+        className=" w-full sm:w-[460px] ">
   <div className="flex overflow-hidden rounded-2xl border p-1.5 border-[#4F46E5]/60 bg-[#0A0A0C] focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200">
    <form onSubmit={handleSearch} className="flex w-full items-center gap-2">
   <input
@@ -85,7 +90,7 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
     placeholder="Type a City..."
     value={query}
     onChange={(e) => setQuery(e.target.value)}
-    className="flex-1 px-4 py-2 bg-transparent text-white placeholder-white/40 focus:outline-none"
+    className="flex-1 px-4 py-1 sm:py-2 bg-transparent text-white placeholder-white/40 focus:outline-none"
   />
   <button
     type="submit"
@@ -96,7 +101,7 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
 </form>
 
   </div>
-</div>
+</motion.div>
 
       <motion.div
      initial={{ y: 30 }}

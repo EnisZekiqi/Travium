@@ -25,8 +25,6 @@ export default async function DestinationPage({ params }) {
 
   return (
     <div
-      initial={{ opacity: 0 }}
-      animate={{opacity:1,transition:{duration:0.5}}}
       className="container mx-auto p-4 mb-10 flex flex-col items-start">
       {/* Hero section with Unsplash image */}
       <div

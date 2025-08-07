@@ -28,7 +28,7 @@ const Navbar = () => {
   }
 
   const navigation = [
-    {id:'#home',title:'Home'},{id:'#features',title:'Features'},{id:'#discover',title:'Discover'},{id:'#contact',title:'Contact'}
+    {id:'#home',title:'Home'},{id:'#features',title:'Features'},{id:'#discover',title:'Discover'},{id:'#contact',title:'Search'}
   ]
   
   const pathname = usePathname();
@@ -68,7 +68,7 @@ const Navbar = () => {
           <a href="#home">  <li className="hover:text-white/50 transition duration-300">Home</li></a>
            <a href="#features"> <li className="hover:text-white/50 transition duration-300">Features</li></a>
            <a href="#discover"> <li className="hover:text-white/50 transition duration-300">Discover</li></a>
-            <a href="#contact"><li className="hover:text-white/50 transition duration-300">Contact</li></a>
+            <a href="#contact"><li className="hover:text-white/50 transition duration-300">Search</li></a>
           </ul>
         </div>
        {isHome ?   <div className="flex gap-4 items-center">

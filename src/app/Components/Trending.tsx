@@ -46,7 +46,7 @@ const containerVariant = {
                         variants={containerVariant}
                         initial="initial"
                         whileInView="animate"
-                        viewport={{once:true}}
+                        viewport={{once:true,amount:0.2}}
                         className="flex items-center gap-2 justify-around w-full">
                     {card1.map((sfc, index) => (
                         <motion.div
@@ -72,7 +72,7 @@ const containerVariant = {
                     <motion.div
                         initial={{ y: 20, scale: 0.6 }}
                         whileInView={{ y: 0, scale: 1, transition: { duration: 0.3, delay: 0 } }}
-                        viewport={{once:true}}
+                        viewport={{once:true,amount:0.2}}
                         className=" w-full">
   <div className={`flex overflow-hidden rounded-2xl border p-1.5 ${hover ? 'inputchange border-[#818cf8]':'border-[#26283A]'}   focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200`}>
     <input
@@ -89,7 +89,7 @@ const containerVariant = {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, transition: { duration: 0.3, delay: 0.2 } }}
-                    viewport={{once:true}}
+                    viewport={{once:true,amount:0.2}}
                     className="flex flex-col items-start gap-2 w-[100%] md:w-[50%]">
                     <h3 className="text-[#818cf8] text-base font-normal">Search by Simply Typing</h3>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#fafafa] leading-10">Find Destinations Instantly</h1>

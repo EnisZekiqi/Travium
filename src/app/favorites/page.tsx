@@ -27,9 +27,9 @@ export default function FavoritesPage() {
 
   return (
     <div className="container mt-4 mx-auto p-4 h-[90vh]">
-      <div className="flex items-center gap-4 justify-between w-full">
-        <h1 className="text-2xl font-bold mb-6">Your Favorites</h1>
-        <button className="cursor-pointer p-2 bg-[#4F46E5] rounded-xl" onClick={() => {
+      <div className="flex items-center gap-4 justify-between w-full mb-6">
+        <h1 className="text-2xl font-bold ">Your Favorites</h1>
+        <button className="cursor-pointer p-2 bg-[#4F46E5] text-sm sm:text-md  rounded-xl" onClick={() => {
           localStorage.removeItem('favorites')
           setFavorites([])
         }}>Clear All</button>

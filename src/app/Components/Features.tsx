@@ -84,7 +84,7 @@ const containerVariant = {
                     initial="initial"
                     whileInView="animate"
                     viewport={{once:true}}
-                    className="flex flex-col md:flex-row items-start md:items-center justify-around mt-4 gap-6.5 w-full">
+                    className="flex flex-col md:flex-row items-start px-2 md:items-center justify-around mt-4 gap-6.5 w-full">
                     {whyUs.map((zdx, index) => (
                         <motion.div
                         variants={childrenVariant}

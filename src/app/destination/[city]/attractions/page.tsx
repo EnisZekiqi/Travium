@@ -44,7 +44,7 @@ if (isLoading) return (
           </div>
           <div className="flex justify-between items-center mt-2">
             <div className="h-4 bg-gray-700 rounded w-20"></div>
-            <div className="h-6 w-6 bg-yellow-400 rounded-full"></div>
+            <div className="h-4 w-4 bg-yellow-400 rounded-full"></div>
           </div>
         </div>
       ))}

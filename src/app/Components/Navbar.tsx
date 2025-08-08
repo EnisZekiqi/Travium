@@ -124,7 +124,9 @@ const Navbar = () => {
             </motion.div>
           ))}
               </motion.ul>
-            <Link href="/favorites" className="text-[#fff] bg-[#4F46E5] text-center justify-center mt-4 flex items-center gap-1.5 rounded-lg text-sm font-medium p-1.5">
+            <Link href="/favorites"
+            onClick={()=>setModalNavbar(false)}
+             className="text-[#fff] bg-[#4F46E5] text-center justify-center mt-4 flex items-center gap-1.5 rounded-lg text-sm font-medium p-1.5">
           <IoMdStar className="text-yellow-400" size={22}/> Favorites
         </Link>
           </div>  

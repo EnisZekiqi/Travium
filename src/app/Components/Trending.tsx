@@ -54,7 +54,7 @@ const containerVariant = {
                             key={index} className="flex flex-col items-center gap-4 opacity-100">
     <span
       className={` p-2 w-fit h-fit  ${
-        hover && index === 0 ? 'bg-[#818cf8] text-white rounded-full' : 'text-[#64656E] rounded-full card1'
+        hover && index === 0 ? 'bg-[#818cf8] text-white rounded-full' : 'text-[#64656E] rounded-full '
       } transition-all duration-300`}
     >
       {sfc.icon}
@@ -88,9 +88,9 @@ const containerVariant = {
                 </div>
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, transition: { duration: 0.3, delay: 0.2 } }}
+                    whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
                     viewport={{once:true,amount:0.2}}
-                    className="flex flex-col items-start gap-2 w-[100%] md:w-[50%]">
+                    className="flex flex-col items-start gap-2 px-2 w-[100%] md:w-[50%]">
                     <h3 className="text-[#818cf8] text-base font-normal">Search by Simply Typing</h3>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#fafafa] leading-10">Find Destinations Instantly</h1>
                     <p className="text-sm sm:text-base font-normal text-[#a1a1aa] w-full sm:w-[80%]">Type in any place or keyword, and our AI instantly finds the best destinations, hidden spots, and local recommendations tailored for you.</p>
@@ -105,7 +105,7 @@ const containerVariant = {
               initial="initial"
               whileInView="animate"
               viewport={{once:true,amount:0.2}}
-              className="first-background w-[320px] h-[200px] sm:w-[350px] sm:h-[225px] flex flex-col items-center justify-center">
+              className="first-background w-[320px] h-[230px] sm:w-[350px] sm:h-[225px] flex flex-col items-center justify-center">
                        
                         <div className="weather-grid flex flex-col gap-4 w-full">
   {/* City 1 */}
@@ -163,9 +163,9 @@ const containerVariant = {
                 </div>
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, transition: { duration: 0.3, delay: 0.2 } }}
+                    whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
                     viewport={{once:true}}
-                    className="flex flex-col items-start gap-2 w-[100%] md:w-[50%]">
+                    className="flex flex-col items-start gap-2 px-2 w-[100%] md:w-[50%]">
                     <h3 className="text-[#fcbc79] text-base font-normal">Stay Weather-Ready</h3>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#fafafa] leading-10">Check Weather Before You Go</h1>
                     <p className="text-sm sm:text-base font-normal text-[#a1a1aa] w-full sm:w-[80%]">Get real-time weather updates for any destination so you can plan better and travel without surprises.</p>
@@ -174,7 +174,7 @@ const containerVariant = {
             <div className="flex flex-col md:flex-row items-center justify-center gap-16 w-full">
                 <div
                     
-                    className="card1 w-[340px] sm:w-full md:w-[550px] border border-[#2E3045] p-8 flex flex-col gap-16 items-center">
+                    className="card1 w-[340px] sm:w-full md:w-[550px] border border-[#2E3045] px-4 sm:px-8 py-8 flex flex-col gap-16 items-center">
                   <div className="favorites flex flex-col gap-4 w-full">
   {/* Destination 1 */}
   <div className="flex items-center justify-between bg-[#1b1b25] border border-[#26283A] hover:border-yellow-400/30 transition-colors duration-300 rounded-lg p-3">
@@ -203,7 +203,7 @@ const containerVariant = {
   </div>
 
   {/* Add new */}
-  <button className="text-sm mt-2 text-white/80 hover:text-white flex items-center gap-2">
+  <button className="text-sm ml-2 mt-2 text-white/80 hover:text-white flex items-center gap-2">
     <span className="text-yellow-400 text-xl">+</span> Add a new favorite
   </button>
 </div>
@@ -213,9 +213,9 @@ const containerVariant = {
                 </div>
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, transition: { duration: 0.3, delay: 0.2 } }}
+                    whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
                     viewport={{once:true}}
-                    className="flex flex-col items-start gap-2 w-[100%] md:w-[50%]">
+                    className="flex flex-col items-start gap-2 px-2 w-[100%] md:w-[50%]">
                     <h3 className="text-[#e973bb] text-base font-normal">Save Your Favorites</h3>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-balance text-[#fafafa] leading-10">Build Your Personal Travel List</h1>
                     <p className="text-sm sm:text-base font-normal text-[#a1a1aa] w-full sm:w-[80%]">Save the destinations you love, revisit them anytime, and plan your next journey with your curated favorites list.</p>

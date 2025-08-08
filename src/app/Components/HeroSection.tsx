@@ -59,7 +59,7 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
         animate={{y:0,transition:{duration:0.3,delay:0.3,  type: "spring",       // spring animation instead of duration
     damping: 15,          // lower = bouncier, higher = less bounce
     stiffness: 120, }}}
-        className="relative z-20 text-center leading-16 tracking-tight text-balance text-[29px] xs:text-[38px] sm:text-[46px] md:text-[56px] font-medium mt-6 w-[100%] md:w-[80%] pointer-events-none">
+        className="relative z-20 text-center leading-10 sm:leading-16 tracking-tight text-balance text-[29px] xs:text-[38px] sm:text-[46px] md:text-[56px] font-medium mt-6 w-[100%] md:w-[80%] pointer-events-none">
         Discover{" "}
         <span className="bg-gradient-to-r from-[#A5B4FC] to-[#C7D2FE] bg-clip-text text-transparent">
           New Horizons
@@ -73,7 +73,7 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
         animate={{y:0,transition:{duration:0.3,delay:0.4,  type: "spring",       // spring animation instead of duration
     damping: 15,          // lower = bouncier, higher = less bounce
     stiffness: 120, }}}
-        className="text-white/50 text-sm sm:text-md font-light mb-8 text-center">
+        className="text-white/50 text-sm sm:text-md font-light mb-8 mt-4 text-center">
         Plan smarter. Travel further. Make every journey unforgettable
       </motion.p>
           
@@ -83,7 +83,7 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
     damping: 15,          // lower = bouncier, higher = less bounce
     stiffness: 120, }}}
         className=" w-full sm:w-[460px] ">
-  <div className="flex overflow-hidden rounded-2xl border p-1.5 border-[#4F46E5]/60 bg-[#0A0A0C] focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200">
+  <div className="flex overflow-hidden rounded-2xl border p-1.5 border-[#818cf8]/60 bg-[#0A0A0C] focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200">
    <form onSubmit={handleSearch} className="flex w-full items-center gap-2">
   <input
     type="text"
@@ -159,11 +159,8 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
         <div className="absolute  flex flex-col items-center  top-0 bottom-0 ml-1 mt-1 right-0 left-0 w-[98.8%] rounded-[10px] h-[98.2%] z-100 bg-[#09090B]">
            <div className="w-full m-2 px-2 ">
   <div className="flex overflow-hidden bg-[#0E0E10] rounded-2xl border p-1.5 border-[#343434] focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200">
-    <input
-      type="text"
-      placeholder="Enter your destination"
-      className="flex-1 px-2 sm:px-4 py-0.5 sm:py-1.5  text-white placeholder-white/40 focus:outline-none"
-    />
+    <div className="flex-1 px-2 sm:px-4 py-0.5 sm:py-1.5 text-sm sm:text-md  text-white/50 placeholder-white/40 focus:outline-none"
+    >Enter your destination</div>
     <button className="px-2 py-1 sm:px-4 sm:py-2  text-white hover:bg-[#1A1A24] transition">
       <CiSearch/>
     </button>

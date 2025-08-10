@@ -27,13 +27,15 @@ const Navbar = () => {
 
   }
 
-  const navigation = [
-    {id:'#home',title:'Home'},{id:'#features',title:'Features'},{id:'#discover',title:'Discover'},{id:'#contact',title:'Search'}
-  ]
   
   const pathname = usePathname();
  const isHome = pathname === '/';
 
+const navigation = [
+    {id:!isHome ? '/' : '#home',title:'Home'},{id:'#features',title:'Features'},{id:'#discover',title:'Discover'},{id:'#contact',title:'Search'}
+  ]
+  
+  
   return ( 
     <nav className="relative py-8 fixed px-8 sm:px-18 flex items-center gap-2 w-full z-50">
       {/* Lights */}

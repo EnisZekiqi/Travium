@@ -1,12 +1,9 @@
 "use client";
 import { useState } from "react";
-import { FaLocationArrow } from "react-icons/fa";
 import { motion } from "motion/react";
 import { CiSearch } from "react-icons/ci";
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
-
-
 const images = [
   'https://plus.unsplash.com/premium_photo-1666432045848-3fdbb2c74531?q=80&w=1032&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=500&auto=format&fit=crop',
@@ -32,31 +29,36 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
   const router = useRouter();
   const [query, setQuery] = useState('');
 
+const [isSearching, setIsSearching] = useState(false);
+
+
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-     e.preventDefault()
+    e.preventDefault()
+
     if (query.trim() !== '') {
+        setIsSearching(true);
       router.push(`/destination/${query.toLowerCase()}`);
     }
   }
+const buttonText = isSearching ? "Searching..." : "Search";
 
 
   return (
     <section id="home" className="relative  text-white h-full flex flex-col justify-center items-center overflow-hidden">
       {/* Background image */}
       <motion.span
-        initial={{ y: 30 }}
-        animate={{y:0,transition:{duration:0.3,delay:0.1,  type: "spring",       // spring animation instead of duration
+        initial={{ y: 30,opacity:0 }}
+        animate={{y:0,opacity:1,transition:{duration:0.3,delay:0.1,  type: "spring",       // spring animation instead of duration
     damping: 15,          // lower = bouncier, higher = less bounce
     stiffness: 120, }}}
         className="Al shadow-[inset_0_1px_0px_rgba(165, 180, 252, .3)]  flex items-center gap-2 text-xs sm:text-sm font-medium p-1.5 border border-[#3B3F59] mt-4">
-        <FaLocationArrow size={12} />
         Your smart companion for every journey
       </motion.span>
 
       {/* Headline */}
       <motion.h1
-      initial={{ y: 30 }}
-        animate={{y:0,transition:{duration:0.3,delay:0.3,  type: "spring",       // spring animation instead of duration
+      initial={{ y: 30 ,opacity:0}}
+        animate={{y:0,opacity:1,transition:{duration:0.3,delay:0.3,  type: "spring",       // spring animation instead of duration
     damping: 15,          // lower = bouncier, higher = less bounce
     stiffness: 120, }}}
         className="relative z-20 text-center leading-10 sm:leading-16 tracking-tight text-balance text-[29px] xs:text-[38px] sm:text-[46px] md:text-[56px] font-medium mt-6 w-[100%] md:w-[80%] pointer-events-none">
@@ -69,8 +71,8 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
 
       {/* Description */}
       <motion.p
-      initial={{ y: 30 }}
-        animate={{y:0,transition:{duration:0.3,delay:0.4,  type: "spring",       // spring animation instead of duration
+      initial={{ y: 30 ,opacity:0}}
+        animate={{y:0,opacity:1,transition:{duration:0.3,delay:0.4,  type: "spring",       // spring animation instead of duration
     damping: 15,          // lower = bouncier, higher = less bounce
     stiffness: 120, }}}
         className="text-white/50 text-sm sm:text-md font-light mb-8 mt-4 text-center">
@@ -78,8 +80,8 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
       </motion.p>
           
      <motion.div
-      initial={{ y: 30 }}
-        animate={{y:0,transition:{duration:0.3,delay:0.5,  type: "spring",       // spring animation instead of duration
+      initial={{ y: 30,opacity:0 }}
+        animate={{y:0,opacity:1,transition:{duration:0.3,delay:0.5,  type: "spring",       // spring animation instead of duration
     damping: 15,          // lower = bouncier, higher = less bounce
     stiffness: 120, }}}
         className=" w-full sm:w-[460px] ">
@@ -96,7 +98,8 @@ const columnedImages = Array.from({ length: columns }, (_, colIndex) =>
     type="submit"
     className="px-4 py-2 text-sm sm:text-md -ml-12 sm:-ml-0 bg-[#0B0B0E] rounded-xl shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] text-white hover:bg-[#1A1A24] transition"
   >
-    Search
+    {buttonText}
+
   </button>
 </form>
 

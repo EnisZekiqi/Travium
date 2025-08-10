@@ -46,7 +46,7 @@ const containerVariant = {
                         variants={containerVariant}
                         initial="initial"
                         whileInView="animate"
-                        viewport={{once:true,amount:0.2}}
+                        viewport={{once:true,amount:0.3}}
                         className="flex items-center gap-2 justify-around w-full">
                     {card1.map((sfc, index) => (
                         <motion.div
@@ -72,7 +72,7 @@ const containerVariant = {
                     <motion.div
                         initial={{ y: 20, scale: 0.6 }}
                         whileInView={{ y: 0, scale: 1, transition: { duration: 0.3, delay: 0 } }}
-                        viewport={{once:true,amount:0.2}}
+                        viewport={{once:true,amount:0.3}}
                         className=" w-full">
   <div className={`flex overflow-hidden rounded-2xl border p-1.5 ${hover ? 'inputchange border-[#818cf8]':'border-[#26283A]'}   focus-within:border-[#818CF8] focus-within:shadow-[inset_0_2px_8px_rgba(129,140,248,0.3)] transition-all duration-200`}>
     <input
@@ -89,7 +89,7 @@ const containerVariant = {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
-                    viewport={{once:true,amount:0.2}}
+                    viewport={{once:true,amount:0.3}}
                     className="flex flex-col items-start gap-2 px-2 w-[100%] md:w-[50%]">
                     <h3 className="text-[#818cf8] text-base font-normal">Search by Simply Typing</h3>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#fafafa] leading-10">Find Destinations Instantly</h1>
@@ -104,7 +104,7 @@ const containerVariant = {
               variants={containerVariant}
               initial="initial"
               whileInView="animate"
-              viewport={{once:true,amount:0.2}}
+              viewport={{once:true,amount:0.3}}
               className="first-background w-[320px] h-[230px] sm:w-[350px] sm:h-[225px] flex flex-col items-center justify-center">
                        
                         <div className="weather-grid flex flex-col gap-4 w-full">
@@ -177,7 +177,11 @@ const containerVariant = {
                     className="card1 w-[340px] sm:w-full md:w-[550px] border border-[#2E3045] px-4 sm:px-8 py-8 flex flex-col gap-16 items-center">
                   <div className="favorites flex flex-col gap-4 w-full">
   {/* Destination 1 */}
-  <div className="flex items-center justify-between bg-[#1b1b25] border border-[#26283A] hover:border-yellow-400/30 transition-colors duration-300 rounded-lg p-3">
+              <motion.div
+   initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
+                    viewport={{once:true}}
+                className="flex items-center justify-between bg-[#1b1b25] border border-[#26283A] hover:border-yellow-400/30 transition-colors duration-300 rounded-lg p-3">
     <div className="flex items-center gap-3">
       <span className="text-yellow-400">
         <IoMdStarOutline />
@@ -188,10 +192,14 @@ const containerVariant = {
       </div>
     </div>
     <button className="text-xs bg-[#09090B] px-3 py-1.5 rounded-md cursor-pointer">View</button>
-  </div>
+  </motion.div>
 
   {/* Destination 2 */}
-  <div className="flex items-center justify-between bg-[#1b1b25] border border-[#26283A] hover:border-yellow-400/30 transition-colors duration-300 rounded-lg p-3">
+              <motion.div
+   initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
+                    viewport={{once:true}}
+                className="flex items-center justify-between bg-[#1b1b25] border border-[#26283A] hover:border-yellow-400/30 transition-colors duration-300 rounded-lg p-3">
     <div className="flex items-center gap-3">
       <span className="text-yellow-400"><IoMdStar/></span>
       <div>
@@ -200,7 +208,7 @@ const containerVariant = {
       </div>
     </div>
     <button className="text-xs bg-[#09090B] px-3 py-1.5 rounded-md cursor-pointer">View</button>
-  </div>
+  </motion.div>
 
   {/* Add new */}
   <button className="text-sm ml-2 mt-2 text-white/80 hover:text-white flex items-center gap-2">

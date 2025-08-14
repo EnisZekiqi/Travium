@@ -46,6 +46,7 @@ export default async function DestinationPage({
           <span className="text-lg flex items-center ">
             {weather.temp}°C - <p className="text-white/80"> {weather.condition}</p>
           </span>
+          <Link href={`/destination/${city}/forecast`}>View Full Forecast</Link>
         </div>
       )}
 

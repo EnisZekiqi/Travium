@@ -12,8 +12,15 @@ type ForecastDay = {
   };
 };
 
-export default async function ForecastPage({ params }: { params: { city: string } }) {
-  const forecast: ForecastDay[] | null = await getCityWeatherForecast(params.city);
+interface ForecastPageProps {
+  params: {
+    city: string;
+  };
+}
+
+export default async function ForecastPage({ params }: ForecastPageProps) {
+    const forecast: ForecastDay[] | null =
+        await getCityWeatherForecast(params.city);
 
   if (!forecast) {
     return <div>No forecast available</div>;

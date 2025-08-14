@@ -41,12 +41,13 @@ export default async function DestinationPage({
 
       {/* Weather */}
       {weather && (
-        <div className="mt-4 flex items-center space-x-3">
+        <div className="mt-4 flex flex-col md:flex-row items-center space-x-5">
           <img src={weather.icon} alt={weather.condition} />
-          <span className="text-lg flex items-center ">
+          <span className="text-lg flex items-center mb-4 sm:mb-0 ml-0 sm:ml-4">
             {weather.temp}°C - <p className="text-white/80"> {weather.condition}</p>
           </span>
-          <Link href={`/destination/${city}/forecast`}>View Full Forecast</Link>
+          
+          <Link href={`/destination/${city}/forecast`} className="text-[#818cf8] text-light">View Full Forecast</Link>
         </div>
       )}
 

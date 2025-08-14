@@ -86,7 +86,7 @@ if (isError) return <p>Failed to load attractions.</p>;
   return (
     <div className="container mx-auto mt-4 p-4 mb-10">
       <h1 className="text-2xl font-bold mb-4 flex items-center gap-1.5">
-        Attractions in <p className="text-[#818cf8]">{city}</p>
+        Attractions in <p className="text-[#818cf8] uppercase">{city}</p>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
   {data.query.search.map((item: { pageid: number; title: string; snippet: string }) => (

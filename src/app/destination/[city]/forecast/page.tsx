@@ -12,13 +12,11 @@ type ForecastDay = {
   };
 };
 
-interface ForecastPageProps {
-  params: {
-    city: string;
-  };
-}
-
-export default async function ForecastPage({ params }: ForecastPageProps) {
+export default async function ForecastPage({
+  params,
+}: {
+  params: { city: string };
+}) {
     const forecast: ForecastDay[] | null =
         await getCityWeatherForecast(params.city);
 
@@ -27,7 +25,7 @@ export default async function ForecastPage({ params }: ForecastPageProps) {
   }
 
   return (
-    <div className="container mx-auto mt-4 p-4 mb-10">
+    <div className="container mx-auto mt-4 p-4 mb-10 h-full sm:h-[80vh]">
       <h1 className="text-2xl font-bold mb-6">3-Day Forecast for <b className="text-[#818cf8] uppercase">{params.city}</b></h1>
       <div className="grid gap-4 md:grid-cols-3">
         {forecast.map((day) => (

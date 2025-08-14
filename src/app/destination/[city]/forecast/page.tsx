@@ -1,25 +1,29 @@
 // app/forecast/[city]/page.tsx
 import { getCityWeatherForecast } from "@/app/lib/api/weather";
 
-type Forecast = {
-    date: string,
-    avgtemp: string,
-}
+type ForecastDay = {
+  date: string;
+  day: {
+    avgtemp_c: number;
+    condition: {
+      icon: string;
+      text: string;
+    };
+  };
+};
 
 export default async function ForecastPage({ params }: { params: { city: string } }) {
-  const forecast = await getCityWeatherForecast(params.city);
+  const forecast: ForecastDay[] | null = await getCityWeatherForecast(params.city);
 
   if (!forecast) {
     return <div>No forecast available</div>;
   }
 
-    
-    
   return (
-   <div className="container mx-auto mt-4 p-4 mb-10">
-         <h1 className="text-2xl font-bold mb-4">3-Day Forecast for {params.city}</h1>
-            <div className="grid gap-4 md:grid-cols-3">
-        {forecast.map((day: any) => (
+    <div className="container mx-auto mt-4 p-4 mb-10">
+      <h1 className="text-2xl font-bold mb-6">3-Day Forecast for <b className="text-[#818cf8] uppercase">{params.city}</b></h1>
+      <div className="grid gap-4 md:grid-cols-3">
+        {forecast.map((day) => (
           <div
             key={day.date}
             className="card1 rounded-lg p-4 flex flex-col items-center text-center"
@@ -34,7 +38,7 @@ export default async function ForecastPage({ params }: { params: { city: string 
             <p className="text-white/70">{day.day.condition.text}</p>
           </div>
         ))}
-    </div>
+      </div>
     </div>
   );
 }

@@ -66,7 +66,7 @@ const buttonText = isSearching ? "Searching..." : "Search";
         <span className="bg-gradient-to-r from-[#A5B4FC] to-[#C7D2FE] bg-clip-text text-transparent">
           New Horizons
         </span>{" "}
-        with Explorer
+        with Travium
       </motion.h1>
 
       {/* Description */}

@@ -74,7 +74,7 @@ const navigation = [
           </ul>
         </div>
        {isHome ?   <div className="flex gap-4 items-center">
-        <Link href="/favorites" className="text-[#fff] bg-[#4F46E5] flex items-center gap-1.5 rounded-lg text-sm font-medium p-1.5">
+        <Link href="/favorites" className="text-[#fff] bg-[#4F46E5] hover:bg-[#4F46E5]/50 transition-all duration-300 flex items-center gap-1.5 rounded-lg text-sm font-medium p-1.5">
           <IoMdStar className="text-yellow-400" size={22}/> Favorites
         </Link>
       </div> : 

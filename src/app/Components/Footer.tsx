@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
 
         {/* Right side */}
-        <div className="flex flex-col w-full justify-start items-start sm:justify-end sm:items-end gap-6">
+        <div className="hidden sm:flex flex-col w-full justify-start items-start sm:justify-end sm:items-end gap-6">
           {/* Quick Links */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-3 text-start sm:text-end">Quick Links</h3>

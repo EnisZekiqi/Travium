@@ -47,16 +47,20 @@ export default async function DestinationPage({
             {weather.temp}°C - <p className="text-white/80"> {weather.condition}</p>
           </span>
           
-          <Link href={`/destination/${city}/forecast`} className="text-[#818cf8] text-light">View Full Forecast</Link>
         </div>
       )}
 
       {/* Button to explore attractions (future) */}
-     <Link href={`/destination/${city}/attractions`}>
-    <button className="mt-6 cursor-pointer px-4 py-2 bg-[#4F46E5] text-white rounded-lg">
+      <div className="flex items-center gap-6 mt-6">
+        <Link href={`/destination/${city}/attractions`}>
+    <button className=" cursor-pointer px-4 py-2 bg-[#4F46E5] text-white rounded-lg">
     Explore Attractions
   </button>
-</Link>
+        </Link>
+        
+       <Link href={`/destination/${city}/forecast`} className="text-[#818cf8] text-light">View Full Forecast</Link>
+     </div>
+
 
     </div>
   );

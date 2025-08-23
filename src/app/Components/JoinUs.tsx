@@ -19,8 +19,25 @@ const JoinUs = () => {
 
     return ( 
         <>
-            <div id="contact" className="zoro relative flex flex-col items-center justify-center overflow-hidden gap-6 py-8 px-6 h-full sm:h-[350px] w-full sm:w-[800px] mb-10 border border-[#1F212E] rounded-xl before:absolute before:inset-0 before:backdrop-blur-sm before:bg-black/20 before:rounded-xl before:z-0">
-                
+            <div id="contact" className=" relative flex flex-col items-center justify-center overflow-hidden gap-6 py-8 px-6 h-full sm:h-[350px] w-full sm:w-[800px] mb-10 border border-[#1F212E] rounded-xl before:absolute before:inset-0 before:backdrop-blur-sm before:bg-black/20 before:rounded-xl before:z-0">
+          <div className="relative">
+             <motion.div
+                          initial={{ opacity: 0.6, x: 30 }}
+                          animate={{opacity:[0.4,0.7,0.4],x:[30,-60,30],transition:{duration:10,repeat:Infinity}}}
+                          className="light absolute lg:block hidden w-[96px] h-[600px] left-[690px] lg:left-[100px] xl:left-[939px] -top-[227px] rounded-full opacity-50 
+                                  bg-[#818cf84d] blur-[32px] animate-float-slow rotate-[32deg]"></motion.div>
+             <div className="lg:hidden block light absolute w-[60px] sm:w-[96px] h-[400px] left-[170px] xs:left-[350px] sm:left-[409px] xl:left-[729px] -top-[112px] rounded-full opacity-30 
+                                  bg-[rgba(129,140,248,0.3)] blur-[32px] animate-float-slow rotate-[32deg]"></div>
+                      {/* Left smaller orange light */}
+                      <motion.div className="dotts absolute hidden sm:block z-0 inset pointer-events-none mask-r-from-80% mask-t-from-50% overflow-visible top-[60px] right-[40px] sm:right-[220px]"></motion.div>
+            
+                  <motion.div className="light absolute w-[80px] h-[300px] -left-[5%] sm:left-[15%] -top-[198px] rounded-full -rotate-[32deg]  opacity-60
+                                  bg-[rgba(250,152,75,.3)] blur-[30px] bg-blend-lighten animate-float-fast"></motion.div>
+                      <div className="light hidden xs:block absolute w-[80px] h-[300px] left-[80%] -top-[198px] rounded-full -rotate-[32deg]  opacity-60
+                                  bg-[rgba(250,152,75,.3)] blur-[30px] bg-blend-lighten animate-float-fast"></div>
+             <div className="light absolute w-[80px] h-[300px] left-[80px] -top-[198px] rounded-full rotate-[30deg]  opacity-60
+                                  bg-[rgba(250, 152, 75, 1)] blur-[30px] hidden xl:block bg-blend-lighten animate-float-fast"></div>
+                </div>
                <div className="logob p-3 rounded-2xl z-10">
                  <Image src="/travel.svg" alt="Logo" width={35} height={35} />
                 </div>

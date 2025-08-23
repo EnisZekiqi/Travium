@@ -44,7 +44,7 @@ const buttonText = isSearching ? "Searching..." : "Search";
 
 
   return (
-    <section id="home" className="relative  text-white h-full flex flex-col justify-center items-center overflow-hidden">
+    <section id="home" className=" relative  text-white h-full flex flex-col justify-center items-center overflow-hidden">
       {/* Background image */}
       <motion.span
         initial={{ y: 30,opacity:0 }}

@@ -1,6 +1,6 @@
 // app/forecast/[city]/page.tsx
 import { getCityWeatherForecast } from "@/app/lib/api/weather";
-
+import Image from "next/image";
 type ForecastDay = {
   date: string;
   day: {
@@ -26,7 +26,10 @@ export default async function ForecastPage({
   const forecast: ForecastDay[] | null = await getCityWeatherForecast(city);
 
   if (!forecast) {
-    return <div>No forecast available</div>;
+    return <div className="h-[90vh] flex flex-col items-center gap-4  justify-center">
+        <Image src="/noweather.svg" width={80} height={80} alt="Logo" className=" " />
+      No forecast available for this city
+    </div>;
   }
 
   return (

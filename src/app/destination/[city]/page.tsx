@@ -1,6 +1,8 @@
 import { getCitySummary } from "@/app/lib/api/wikimedia";
 import { getCityImage } from "@/app/lib/api/unsplash";
 import { getCityWeather } from "@/app/lib/api/weather";
+import { MdOutlineLocationOff } from "react-icons/md";
+
 import Link from "next/link";
 
 export default async function DestinationPage({
@@ -19,9 +21,10 @@ export default async function DestinationPage({
 
   if (!summary) {
     return (
-      <div className="container mx-auto p-4">
+      <div className="container flex flex-col items-center h-screen mx-auto p-4">
         <h1 className="text-2xl font-bold">
-          Sorry, we couldnt find {city}😞
+          <MdOutlineLocationOff size={30}/>
+          Sorry, we couldnt find {city}
         </h1>
       </div>
     );

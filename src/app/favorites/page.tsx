@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { IoMdTrash } from "react-icons/io";
-
+import Image from "next/image";
 type Favorite = {
   pageid: number;
   title: string;
@@ -17,7 +17,10 @@ export default function FavoritesPage() {
     setFavorites(saved);
   }, []);
 
-  if (favorites.length === 0) return <p>No favorites yet.</p>;
+  if (favorites.length === 0) return  <div className="h-[90vh] flex flex-col items-center gap-4  justify-center">
+          <Image src="/nostar.svg" width={80} height={80} alt="Logo" className=" " />
+        No favorites available
+      </div>;
 
   const clearFav = (id : number) => {
     const even = favorites.filter((zdc) => zdc.pageid !== id);

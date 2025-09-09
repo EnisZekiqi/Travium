@@ -11,7 +11,7 @@ const Features = () => {
          { 
     icon: <CiCloudOn size={25}/>, 
     title: 'Smart Itineraries', 
-    description: 'Build AI-powered trip plans tailored to your travel style and budget.' 
+    description: 'Build AI-powered trip plans tailored to your travel style and budget accommodation.' 
   },
   { 
     icon: <CiCompass1 size={25}/>, 
@@ -56,7 +56,7 @@ const containerVariant = {
                     }
                     }}
                     viewport={{once:true}}
-                    className="Al shadow-[inset_0_1px_0px_rgba(165, 180, 252, .3)]  flex items-center gap-2 text-xs sm:text-sm font-medium p-1.5 border border-[#3B3F59]">
+                    className="Al shadow-[inset_0_1px_0px_rgba(165, 180, 252, .3)] text-white/80  flex items-center gap-2 text-xs sm:text-sm font-medium p-1.5 border border-[#3B3F59]">
                    
                   Smarter trips, unforgettable memories
                 </motion.span>
@@ -90,7 +90,7 @@ const containerVariant = {
                         variants={childrenVariant}
                             key={index} className=" pt-4 mr-4 border-t border-[#343434] flex flex-col items-start w-full">
                             <span className="border-t border-[#C4CFFE] -mt-[17.5px] pt-4 mb-4 text-[#7A819B]">{zdx.icon}</span>
-                            <h2 className="font-medium text-lg">{zdx.title}</h2>
+                            <h2 className="font-medium text-lg text-white">{zdx.title}</h2>
                             <p className="text-white/50 text-sm font-normal">{zdx.description}</p>
                         </motion.div>
                     ))}

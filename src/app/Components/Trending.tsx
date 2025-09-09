@@ -191,7 +191,7 @@ const containerVariant = {
         <p className="text-xs text-white/50">Japan</p>
       </div>
     </div>
-    <button className="text-xs bg-[#09090B] px-3 py-1.5 rounded-md cursor-pointer">View</button>
+    <button className="text-xs bg-[#09090B] px-3 py-1.5 rounded-md cursor-pointer text-white">View</button>
   </motion.div>
 
   {/* Destination 2 */}
@@ -207,7 +207,7 @@ const containerVariant = {
         <p className="text-xs text-white/50">France</p>
       </div>
     </div>
-    <button className="text-xs bg-[#09090B] px-3 py-1.5 rounded-md cursor-pointer">View</button>
+    <button className="text-xs bg-[#09090B] px-3 py-1.5 rounded-md cursor-pointer text-white/80">View</button>
   </motion.div>
 
   {/* Add new */}

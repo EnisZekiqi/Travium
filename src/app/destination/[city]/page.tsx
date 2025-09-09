@@ -44,7 +44,7 @@ export default async function DestinationPage({
 
       {/* Weather */}
       {weather && (
-        <div className="mt-4 flex flex-col md:flex-row items-center space-x-5">
+        <div className="mt-4 flex flex-row items-center space-x-5">
           <img src={weather.icon} alt={weather.condition} />
           <span className="text-lg flex items-center mb-4 sm:mb-0 ml-0 sm:ml-4 text-white">
             {weather.temp}°C - <p className="text-white/80"> {weather.condition}</p>

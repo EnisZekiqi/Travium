@@ -85,14 +85,14 @@ if (isError) return <p>Failed to load attractions.</p>;
     
   return (
     <div className="container mx-auto mt-4 p-4 mb-10">
-      <h1 className="text-2xl font-bold mb-4 flex items-center gap-1.5">
+      <h1 className="text-2xl font-bold mb-4 flex items-center gap-1.5 text-white">
         Attractions in <p className="text-[#818cf8] uppercase">{city}</p>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
   {data.query.search.map((item: { pageid: number; title: string; snippet: string }) => (
     <div key={item.pageid} className="card1 border border-[#2E3045] flex flex-col justify-between rounded-lg p-4 shadow-lg">
      <div className="flex flex-col  items-start gap-2">
-       <h2 className="font-bold text-lg">{item.title}</h2>
+       <h2 className="font-bold text-lg text-white">{item.title}</h2>
       <p className="text-sm text-gray-400 mb-3">
         {item.snippet.replace(/<[^>]+>/g, "")}
       </p>

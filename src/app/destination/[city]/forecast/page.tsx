@@ -26,7 +26,7 @@ export default async function ForecastPage({
   const forecast: ForecastDay[] | null = await getCityWeatherForecast(city);
 
   if (!forecast) {
-    return <div className="h-[90vh] flex flex-col items-center gap-4  justify-center">
+    return <div className="h-[90vh] flex flex-col items-center gap-4  justify-center text-white">
         <Image src="/noweather.svg" width={80} height={80} alt="Logo" className=" " />
       No forecast available for this city
     </div>;
@@ -34,7 +34,7 @@ export default async function ForecastPage({
 
   return (
     <div className="container mx-auto mt-4 p-4 mb-10 h-full sm:h-[80vh]">
-      <h1 className="text-2xl font-bold mb-6">3 Day Forecast for <b className="text-[#818cf8] uppercase">{city}</b></h1>
+      <h1 className="text-2xl font-bold mb-6 text-white">3 Day Forecast for <b className="text-[#818cf8] uppercase">{city}</b></h1>
       <div className="grid gap-4 md:grid-cols-3">
         {forecast.map((day) => (
          <div

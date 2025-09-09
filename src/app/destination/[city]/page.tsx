@@ -39,14 +39,14 @@ export default async function DestinationPage({
         style={{ backgroundImage: `url(${image || summary.image})` }}
       ></div>
 
-      <h1 className="text-3xl font-bold">{summary.title}</h1>
+      <h1 className="text-3xl font-bold text-white">{summary.title}</h1>
       <p className="mt-2 text-white/50 text-sm sm:text-md md:text-[16px]">{summary.description}</p>
 
       {/* Weather */}
       {weather && (
         <div className="mt-4 flex flex-col md:flex-row items-center space-x-5">
           <img src={weather.icon} alt={weather.condition} />
-          <span className="text-lg flex items-center mb-4 sm:mb-0 ml-0 sm:ml-4">
+          <span className="text-lg flex items-center mb-4 sm:mb-0 ml-0 sm:ml-4 text-white">
             {weather.temp}°C - <p className="text-white/80"> {weather.condition}</p>
           </span>
           

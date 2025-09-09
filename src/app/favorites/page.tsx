@@ -17,7 +17,7 @@ export default function FavoritesPage() {
     setFavorites(saved);
   }, []);
 
-  if (favorites.length === 0) return  <div className="h-[90vh] flex flex-col items-center gap-4  justify-center">
+  if (favorites.length === 0) return  <div className="h-[90vh] flex flex-col items-center gap-4  justify-center text-white">
           <Image src="/nostar.svg" width={80} height={80} alt="Logo" className=" " />
         No favorites available
       </div>;
@@ -31,7 +31,7 @@ export default function FavoritesPage() {
   return (
     <div className="container mt-4 mx-auto p-4 h-[90vh]">
       <div className="flex items-center gap-4 justify-between w-full mb-6">
-        <h1 className="text-2xl font-bold ">Your Favorites</h1>
+        <h1 className="text-2xl font-bold text-white">Your Favorites</h1>
         <button className="cursor-pointer p-2 bg-[#4F46E5] text-sm sm:text-md  rounded-xl" onClick={() => {
           localStorage.removeItem('favorites')
           setFavorites([])
@@ -40,7 +40,7 @@ export default function FavoritesPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {favorites.map((fav,index) => (
           <div key={index} className="card1 border border-[#2E3045] rounded-lg p-4 shadow-lg">
-            <h2 className="font-bold text-lg">{fav.title}</h2>
+            <h2 className="font-bold text-lg text-white">{fav.title}</h2>
             <p className="text-sm text-gray-400 mb-3">{fav.description}</p>
             <div className="flex items-center gap-4 justify-between w-full">
               <p className="text-xs text-white/50 ">City : <b className="text-[#818cf8] uppercase">{fav.city}</b></p>
